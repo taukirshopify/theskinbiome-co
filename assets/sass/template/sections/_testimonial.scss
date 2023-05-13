@@ -1,0 +1,135 @@
+.testi-box {
+    background-color: $smoke-color;
+    border-radius: 30px;
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    padding: 50px;
+    gap: 40px;
+    &_img {
+        flex: 43%;
+        display: flex;
+        gap: 15px;
+        .img {
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+        }
+    }
+    .text {
+        background-color: $white-color;
+        font-size: 28px;
+        display: block;
+        padding: 12px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+    &_text {
+        font-size: 46px;
+        line-height: 1.2;
+        font-weight: 700;
+        margin-bottom: 35px;
+    }
+    .madia-body {
+        flex: calc(57% - 40px);
+    }
+    &_name {
+        font-size: 36px;
+        color: $theme-color;
+        margin-bottom: -0.24em;
+    }
+}
+.splide__arrow {
+    background-color: transparent;
+    padding: 0;
+    width: auto;
+    height: auto;
+}
+#review-slider {
+    .splide__arrow--prev {
+        left: -2em;
+    }
+    .splide__arrow--next {
+        right: -2em;
+    }
+}
+
+@media (max-width: 1800px) {
+    #review-slider {
+        .splide__arrow--prev {
+            left: 0;
+        }
+        .splide__arrow--next {
+            right: 0;
+        }
+    }
+}
+
+@media (max-width: 1500px) {
+    .testi-box .text {
+        font-size: 20px;
+    }
+    .testi-box_text {
+        font-size: 34px;
+    }
+}
+
+@include lg {
+    .testi-box {
+        padding: 40px;
+        &_text {
+            font-size: 28px;
+        }
+        &_name {
+            font-size: 28px;
+        }
+    }
+}
+
+@include md {
+    .testi-box {
+        flex-wrap: wrap;
+        gap: 30px;
+        border-radius: 20px;
+        text-align: center;
+        &_img {
+            flex: 100%;
+        }
+        .media-body {
+            flex: 100%;
+        }
+        &_text {
+            margin-bottom: 25px;
+        }
+    }
+}
+
+@include sm {
+    .testi-box {
+        border-radius: 10px;
+        padding: 20px 20px 65px 20px;
+        &_text {
+            font-size: 24px;
+        }
+        &_name {
+            font-size: 26px;
+        }
+        .text {
+            font-size: 14px;
+            line-height: 1;
+        }
+    }
+    #review-slider {
+        .splide__arrow--prev {
+            top: calc(100% - 25px);
+            left: 40%;
+        }
+        .splide__arrow--next {
+            top: calc(100% - 25px);
+            right: 40%;
+        }
+    }
+}
